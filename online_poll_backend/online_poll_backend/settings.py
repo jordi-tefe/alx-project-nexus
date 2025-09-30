@@ -13,14 +13,36 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+print("✅ settings.py is being loaded")
 
 
 # load environment variables 
-load_dotenv()
+# load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# settings.py
+# BASE_DIR = online_poll_backend (where manage.py is)
+BASE_DIR = Path(__file__).resolve().parent.parent  
+
+# ✅ Load .env file
+env_path = BASE_DIR / ".env"
+print("🔍 Looking for .env here:", env_path)
+
+load_dotenv(env_path)
+
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+
+# Test
+# print("DB_NAME:", os.getenv("DB_NAME"))
+# print("DB_USER:", os.getenv("DB_USER"))
+# print("DB_PASSWORD:", os.getenv("DB_PASSWORD"))
+# print("DB_HOST:", os.getenv("DB_HOST"))
+# print("DB_PORT:", os.getenv("DB_PORT"))
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,8 +54,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -93,18 +114,30 @@ WSGI_APPLICATION = 'online_poll_backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+print("✅ ENGINE will be:", 'django.db.backends.postgresql')
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv("DB_NAME"),
+#         'USER': os.getenv("DB_USER"),
+#         'PASSWORD': os.getenv("DB_PASSWORD"),
+#         'HOST': os.getenv("DB_HOST"),
+#         'PORT': os.getenv("DB_PORT"),
+#     }
+# }
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PASSWORD"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT"),
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
-
 
 
 # Password validation
