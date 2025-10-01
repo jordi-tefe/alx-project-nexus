@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\yorda\Desktop\From HDD\alx-project-nexus\venv"
+VIRTUAL_ENV="C:\Users\yorda\Desktop\Online _PollSystem\alx-project-nexus\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

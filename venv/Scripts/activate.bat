@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\yorda\Desktop\From HDD\alx-project-nexus\venv
+set VIRTUAL_ENV=C:\Users\yorda\Desktop\Online _PollSystem\alx-project-nexus\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
