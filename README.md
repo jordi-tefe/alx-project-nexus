@@ -1,6 +1,6 @@
-🗳️ ALX Project Nexus – Online Poll System
+#🗳️ ALX Project Nexus – Online Poll System
 
-A backend application built with Django, Django REST Framework (DRF), and PostgreSQL, designed for managing polls, user authentication, and voting.
+#A backend application built with Django, Django REST Framework (DRF), and PostgreSQL, designed for managing polls, user authentication, and voting.
 
 This project was developed as part of the ALX Project Nexus backend learning journey.
 
