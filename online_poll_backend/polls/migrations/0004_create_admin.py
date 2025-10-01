@@ -18,7 +18,7 @@ def create_admin_user(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0003_auto'),  # replace with your last migration name if different
+        ('polls', '0003_remove_vote_unique_user_vote_and_more'),  # replace with your last migration name if different
     ]
 
     operations = [
