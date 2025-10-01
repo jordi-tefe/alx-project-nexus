@@ -1,53 +1,47 @@
-#🗳️ ALX Project Nexus – Online Poll System
+# 🗳️ ALX Project Nexus – Online Poll System
 
-#A backend application built with Django, Django REST Framework (DRF), and PostgreSQL, designed for managing polls, user authentication, and voting.
+A backend application built with **Django**, **Django REST Framework (DRF)**, and **PostgreSQL**, designed for managing polls, user authentication, and voting.  
 
-This project was developed as part of the ALX Project Nexus backend learning journey.
+This project was developed as part of the **ALX Project Nexus backend learning journey**.
 
-🚀 Features
+---
 
-Authentication & Authorization
+## 🚀 Features
 
-JWT-based login & token refresh (via SimpleJWT)
+### 🔐 Authentication & Authorization
+- JWT-based login & token refresh (via SimpleJWT)  
+- User registration & logout  
 
-User registration & logout
+### ⚙️ Admin Panel
+- Access Django’s powerful `/admin/` panel  
+- **Superuser created automatically** (see credentials below)  
 
-Admin Panel
+### 📊 Poll Management (CRUD)
+- Create, read, update, delete polls  
+- Manage via API endpoints  
 
-Access Django’s powerful /admin/ panel
+### 🗳️ Voting System
+- Cast votes on polls  
+- Prevent duplicate voting per user  
 
-Superuser created automatically (see credentials below)
+### 📖 API Documentation
+- Swagger UI available at: **`/api/docs/`**
 
-Poll Management (CRUD)
+---
 
-Create, read, update, delete polls
+## 🛠️ Tech Stack
+- **Backend Framework:** Django 5 + Django REST Framework  
+- **Database:** PostgreSQL (Render-hosted)  
+- **Authentication:** JWT (djangorestframework-simplejwt)  
+- **Docs:** Swagger (drf-yasg)  
+- **Deployment:** Render (Free Tier)  
 
-Manage via API endpoints
+---
 
-Voting System
+## 📦 Installation & Setup
 
-Cast votes on polls
-
-Prevent duplicate voting per user
-
-API Documentation
-
-Swagger UI available at /api/docs/
-
-🛠️ Tech Stack
-
-Backend Framework: Django 5 + Django REST Framework
-
-Database: PostgreSQL (Render-hosted)
-
-Authentication: JWT (djangorestframework-simplejwt)
-
-Docs: Swagger (drf-yasg)
-
-Deployment: Render (Free Tier)
-
-📦 Installation & Setup
-1. Clone the repo
+### 1️⃣ Clone the repo
+```bash
 git clone https://github.com/your-username/alx-project-nexus.git
 cd alx-project-nexus/online_poll_backend
 
