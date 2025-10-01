@@ -22,7 +22,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
-
+from .views import home  # import the view
 schema_view = get_schema_view(
     openapi.Info(
         title="Polls API",
@@ -35,6 +35,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', home),  # root URL
 
     # Polls app
     path("api/", include("polls.urls")),
