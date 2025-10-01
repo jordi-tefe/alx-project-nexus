@@ -28,6 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ✅ Load .env file
 env_path = BASE_DIR / ".env"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 print("🔍 Looking for .env here:", env_path)
 
 load_dotenv(env_path)
@@ -80,10 +81,13 @@ INSTALLED_APPS = [
 
 # Set custom user model
 AUTH_USER_MODEL = "polls.User"
+# Serve static files with WhiteNoise in production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
