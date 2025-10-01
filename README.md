@@ -3,6 +3,7 @@
 A backend application built with **Django**, **Django REST Framework (DRF)**, and **PostgreSQL**, designed for managing polls, user authentication, and voting.  
 
 This project was developed as part of the **ALX Project Nexus backend learning journey**.
+**Hosted -> https://alx-project-nexus-1-ym5a.onrender.com/**
 
 ---
 
@@ -42,7 +43,7 @@ This project was developed as part of the **ALX Project Nexus backend learning j
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/your-username/alx-project-nexus.git
+git clone https://github.com/jordi-tefe/alx-project-nexus.git
 cd alx-project-nexus/online_poll_backend
 
 2. Create a virtual environment
